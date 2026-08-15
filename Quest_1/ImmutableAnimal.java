@@ -46,6 +46,7 @@ public final class ImmutableAnimal {
     public int hashCode() {
         return  Objects.hash(name, averageWeight, region);
     }
+    @Override
     public String toString() {
         return String.format("ImmutableAnimal{name='%s', averageWeight=%d, region=%s}", name, averageWeight, region);
     }
