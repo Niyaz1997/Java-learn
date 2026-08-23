@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        ImmutableAnimal animal = new ImmutableAnimal("Тигр", 220, Arrays.asList("Азия", "Европа"));
+        ImmutableAnimal animal = new ImmutableAnimal("Тигр", 220, List.of("Азия", "Европа"));
         System.out.println("Исходный объект: " + animal);
 
         ImmutableAnimal withNewRegion = animal.addRegion("Африка");
@@ -22,7 +22,7 @@ public class Main {
         System.out.println("После изменения веса: " + heavier);
 
         // Проверка equals и hashCode
-        ImmutableAnimal duplicate = new ImmutableAnimal("Амурский тигр", 250, Arrays.asList("Европа", "Африка"));
+        ImmutableAnimal duplicate = new ImmutableAnimal("Амурский тигр", 250, List.of("Европа", "Африка"));
         System.out.println("Объекты равны (equals): " + heavier.equals(duplicate));
         System.out.println("hashCode совпадают: " + (heavier.hashCode() == duplicate.hashCode()));
         List<String> regionsCopy = heavier.getRegion();
