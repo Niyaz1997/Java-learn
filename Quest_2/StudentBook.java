@@ -48,7 +48,7 @@ class Book {
 
     public Book(String nameBook, String author, int pages, int year) {
         if (nameBook == null) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("nameBook name cannot be null");
         }
         this.nameBook = nameBook;
         this.author = (author == null) ? "" : author;
