@@ -82,11 +82,11 @@ class Book {
 
     @Override
     public int hashCode() {
-        return Objects.hash(nameBook, author, year, pages);
+        return Objects.hash(nameBook, author, pages, year);
     }
 
     @Override
     public String toString() {
-        return String.format("Book: %s, Author: %s, %d year, %d pages", nameBook, author, year, pages);
+        return String.format("Book: %s, Author: %s, %d pages, %d year", nameBook, author, pages, year);
     }
 }
