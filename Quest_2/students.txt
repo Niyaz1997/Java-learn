@@ -1,0 +1,5 @@
+Masha Kuznetsova|The Hobbit|J.R.R. Tolkien|310|1937|Sherlock Holmes|Arthur Conan Doyle|480|1892|The Jungle Book|Rudyard Kipling|256|1894|Levsha|Nikolai Leskov|128|1881
+Elon Musk|Extreme Programming: Test-Driven Development|Kent Beck|224|2003|Clean Code|Robert Martin|464|2008|Java Concurrency in Practice|Brian Goetz|512|2006
+Brad Pitt|The Lord of the Rings|J.R.R. Tolkien|1184|1954|The Headless Horseman|Mayne Reid|432|1865|The Martian Chronicles|Edgar Rice Burroughs|320|1912|The Wheel of Time|Robert Jordan|1000|1990|A Game of Thrones|George R.R. Martin|607|1996
+Igor Rybakov|Effective Java|Joshua Bloch|416|2018|The Pragmatic Programmer|Andrew Hunt, David Thomas|352|1999|Refactoring|Martin Fowler|448|2019|Dune|Frank Herbert|412|1965|Dune Messiah|Frank Herbert|384|1969
+Shakira|1984|George Orwell|328|1949|Harry Potter|J.K. Rowling|456|1997|Design Patterns|Erich Gamma et al.|416|1994|The Idiot|Fyodor Dostoevsky|672|1869|War and Peace|Leo Tolstoy|1225|1869|Dead Souls|Nikolai Gogol|352|1842
