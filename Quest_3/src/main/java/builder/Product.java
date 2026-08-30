@@ -28,50 +28,59 @@ public class Product {
         private List<String> images = new ArrayList<>();
 
         public ProductBuilder(String name, String category, double price) {
-            this.name=name;
-            this.category=category;
-            this.price=price;
+            this.name = name;
+            this.category = category;
+            this.price = price;
         }
+
         public ProductBuilder stock(int quantity) {
-            this.stockQuantity=quantity;
+            this.stockQuantity = quantity;
             return this;
         }
+
         public ProductBuilder addSpecification(String spec) {
             this.specifications.add(spec);
             return this;
         }
+
         public ProductBuilder addAttributes(String key, String value) {
             this.attributes.put(key, value);
             return this;
         }
+
         public ProductBuilder setAvailability(boolean available) {
-            this.isAvailable=available;
+            this.isAvailable = available;
             return this;
         }
+
         public ProductBuilder setRating(double rating) {
-            this.rating=rating;
+            this.rating = rating;
             return this;
         }
+
         public ProductBuilder addImage(String imageUrl) {
             this.images.add(imageUrl);
             return this;
         }
+
         public Product build() {
             return new Product(this);
         }
 
     }
+
     private Product(ProductBuilder builder) {
-        this.name=builder.name;
-        this.category=builder.category;
-        this.price=builder.price;
-        this.stockQuantity=builder.stockQuantity;
-        this.specifications=builder.specifications;
-        this.attributes=builder.attributes;
-        this.isAvailable=builder.isAvailable;
-        this.rating=builder.rating;
-        this.images=builder.images;
+        this.name = builder.name;
+        this.category = builder.category;
+        this.price = builder.price;
+        this.stockQuantity = builder.stockQuantity;
+        this.specifications = builder.specifications;
+        this.attributes = builder.attributes;
+        this.isAvailable = builder.isAvailable;
+        this.rating = builder.rating;
+        this.images = builder.images;
     }
+
     @Override
     public String toString() {
         return "Product{\n" +

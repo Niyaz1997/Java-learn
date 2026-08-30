@@ -3,6 +3,7 @@ package adapter;
 interface ModernPayment {
     void pay(double amount);
 }
+
 class OldPayment {
     public void transfer(String account, double money) {
         System.out.println("Old system: transfer " + money + " to " + account);
@@ -21,6 +22,7 @@ class PaymentAdapter implements ModernPayment {
         oldPayment.transfer("default-account", amount);
     }
 }
+
 public class Adapter {
     public static void main(String[] args) {
         System.out.println("Adapter Pattern Demo \n");

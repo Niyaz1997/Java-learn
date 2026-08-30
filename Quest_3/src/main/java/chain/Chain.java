@@ -2,67 +2,80 @@ package chain;
 
 abstract class DiscountHandler {
     protected DiscountHandler next;
+
     public void setNext(DiscountHandler next) {
-        this.next=next;
+        this.next = next;
     }
-    public abstract  double applyDiscount(double price, User user, String weekDay);
+
+    public abstract double applyDiscount(double price, User user, String weekDay);
 }
+
 class User {
     private String name;
     private int ordersCount;
     private double totalSpent;
 
     public User(String name, int ordersCount, double totalSpent) {
-        this.name=name;
-        this.ordersCount=ordersCount;
-        this.totalSpent=totalSpent;
+        this.name = name;
+        this.ordersCount = ordersCount;
+        this.totalSpent = totalSpent;
     }
+
     public int getOrdersCount() {
         return ordersCount;
     }
+
     public double getTotalSpent() {
         return totalSpent;
     }
+
     public String getName() {
         return name;
     }
 }
+
 class NewUserDiscount extends DiscountHandler {
     @Override
     public double applyDiscount(double price, User user, String weekDay) {
-        if (user.getOrdersCount()==0 && !weekDay.equals("Holiday")) {
+        if (user.getOrdersCount() == 0 && !weekDay.equals("Holiday")) {
             double discount = price * 0.05;
             System.out.println("Discount for new user: 5% (saved " + discount + " peso)");
-            return price-discount;
-        } else if (next!=null) {
+            return price - discount;
+        } else if (next != null) {
             return next.applyDiscount(price, user, weekDay);
-        } return price;
+        }
+        return price;
     }
 }
+
 class VipCustomerDiscount extends DiscountHandler {
     @Override
     public double applyDiscount(double price, User user, String weekDay) {
-        if (user.getOrdersCount()>=10 && user.getTotalSpent()>10000 && !weekDay.equals("Holiday")) {
+        if (user.getOrdersCount() >= 10 && user.getTotalSpent() > 10000 && !weekDay.equals("Holiday")) {
             double discount = price * 0.10;
             System.out.println("VIP customer discount: 10% (saved " + discount + " peso");
-            return price-discount;
-        } else if (next!=null) {
+            return price - discount;
+        } else if (next != null) {
             return next.applyDiscount(price, user, weekDay);
-        } return price;
+        }
+        return price;
     }
 }
+
 class HolidayDiscount extends DiscountHandler {
     @Override
     public double applyDiscount(double price, User user, String weekDay) {
         if (weekDay.equals("Holiday")) {
-            double discount = price *0.07;
+            double discount = price * 0.07;
             System.out.println("Holiday discount: 7% (saved " + discount + " peso");
-            return price-discount;
-        } else if (next!=null) {
+            return price - discount;
+        } else if (next != null) {
             return next.applyDiscount(price, user, weekDay);
-        } return price;
+        }
+        return price;
     }
 }
+
 public class Chain {
     public static void main(String[] args) {
         System.out.println("Chain of Responsibility Demo \n");

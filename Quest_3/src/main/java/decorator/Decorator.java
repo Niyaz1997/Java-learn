@@ -2,6 +2,7 @@ package decorator;
 
 interface Coffee {
     double getCost();
+
     String getDescription();
 }
 
@@ -130,6 +131,7 @@ class DoubleShotDecorator extends CoffeeDecorator {
         return super.getDescription() + ", double shot";
     }
 }
+
 public class Decorator {
     public static void main(String[] args) {
         System.out.println("Decorator Pattern Demo\n");

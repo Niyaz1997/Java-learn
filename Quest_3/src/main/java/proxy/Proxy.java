@@ -1,5 +1,7 @@
 package proxy;
+
 import builder.Product;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -62,6 +64,7 @@ class CachedProductRepository implements ProductRepository {
         realRepo.saveProduct(id, product);
     }
 }
+
 public class Proxy {
     public static void main(String[] args) {
         ProductRepository repo = new CachedProductRepository(new RealProductRepository());

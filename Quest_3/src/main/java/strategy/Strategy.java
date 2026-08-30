@@ -101,6 +101,7 @@ class Order {
         System.out.println("Cost of delivery " + cost + " peso\n");
     }
 }
+
 public class Strategy {
     public static void main(String[] args) {
         System.out.println("Strategy Pattern Demo\n");
