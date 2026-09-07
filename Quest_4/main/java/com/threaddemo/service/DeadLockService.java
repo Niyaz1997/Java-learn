@@ -2,6 +2,7 @@ package service;
 
 import com.threaddemo.model.ThreadResult;
 import com.threaddemo.util.Logger;
+import service.BaseThreadService;
 
 public class DeadLockService extends BaseThreadService {
     private final Object resource1 = new Object();

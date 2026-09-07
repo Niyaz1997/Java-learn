@@ -2,6 +2,7 @@ package service;
 
 import com.threaddemo.model.ThreadResult;
 import com.threaddemo.util.Logger;
+import service.BaseThreadService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
