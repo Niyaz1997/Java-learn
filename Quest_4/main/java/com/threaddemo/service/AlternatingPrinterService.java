@@ -1,6 +1,7 @@
 package service;
 
 import com.threaddemo.model.ThreadResult;
+import service.BaseThreadService;
 import com.threaddemo.util.Logger;
 
 public class AlternatingPrinterService extends BaseThreadService {
